@@ -32,6 +32,14 @@ const routes = [
 		path: '/edit-driver/:id',
 		component: () => import('@/views/EditDriver.vue')
 	},
+	{
+		path: '/order',
+		component: () => import('@/views/Order.vue')
+	},
+	{
+		path: '/create-order',
+		component: () => import('@/views/CreateOrder.vue')
+	}
 ]
 
 const router = new VueRouter({
