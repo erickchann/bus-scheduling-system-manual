@@ -4,10 +4,10 @@
         <div class="container">
             <div class="card mt-4">
                 <div class="card-header">
-                    Create Driver
+                    Edit Driver
                 </div>
                 <div class="card-body">
-                    <form @submit.prevent="create">
+                    <form @submit.prevent="edit">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" id="name" name="name"
@@ -41,6 +41,7 @@ export default {
     data() {
         return {
             token: localStorage.getItem('token'),
+            id: this.$route.params.id,
             formData : {
                 "name" : '',
                 "age" : '',
@@ -49,8 +50,8 @@ export default {
         }
     },
     methods: {
-        create() {
-            axios.post(`drivers?token=${this.token}`, this.formData)
+        edit() {
+            axios.put(`drivers/${this.id}?token=${this.token}`, this.formData)
                 .then(res => {
                     console.log(res.data);
                 })

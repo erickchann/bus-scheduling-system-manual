@@ -24,6 +24,14 @@ const routes = [
 		path: '/driver',
 		component: () => import('@/views/Driver.vue')
 	},
+	{
+		path: '/create-driver',
+		component: () => import('@/views/CreateDriver.vue')
+	},
+	{
+		path: '/edit-driver/:id',
+		component: () => import('@/views/EditDriver.vue')
+	},
 ]
 
 const router = new VueRouter({

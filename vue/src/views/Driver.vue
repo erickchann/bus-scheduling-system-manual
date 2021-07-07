@@ -7,7 +7,7 @@
                     Driver
                 </div>
                 <div class="card-body">
-                    <router-link to="/create-bus" class="btn btn-primary">Add Driver</router-link>
+                    <router-link to="/create-driver" class="btn btn-primary">Add Driver</router-link>
                     <table class="table mt-4">
                         <thead>
                             <tr>
@@ -25,7 +25,7 @@
                                 <td>{{ driver.age }}</td>
                                 <td>{{ driver.id_number }}</td>
                                 <td>
-                                    <router-link :to="`edit-bus/${driver.id}`" class="btn btn-sm btn-info">Edit</router-link>
+                                    <router-link :to="`edit-driver/${driver.id}`" class="btn btn-sm btn-info">Edit</router-link>
                                     <a @click.prevent="del(driver.id)" href="" class="btn btn-sm btn-danger">Delete</a>
                                 </td>
                             </tr>
